@@ -79,6 +79,7 @@ function updateContent(data) {
 $(document).ready(function(){
   // Get rep data
   var url = window.location.href;
+  console.log(url);
 
   if ($.inArray( url, ["http://www.killsconstituents.com", "http://killsconstituents"] ) >= 0) {
     renderHomePage();
