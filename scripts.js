@@ -54,6 +54,10 @@ function updateContent(data) {
   $("#formalTitle").text(title);
 
   $(document).prop('title', title + " " + data.first_name + " " + data.last_name + " Voted to Kill " + data.killed + " " + " Constituents");
+
+  var url = window.location.href;
+  $('#fbLink').attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + url);
+  $('#twitterLink').attr("href", "https://twitter.com/home?status=Congressman%20%40" data.first_name + "%20" + data.last_name "%20voted%20to%20kill%20" + data.killed + "%20of%20his%20constituents%20by%202026%2C%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20pic.twitter.com/4gwVgJUG0i");
 }
 
 
@@ -64,9 +68,8 @@ function updateContent(data) {
 $(document).ready(function(){
   // Get rep data
   var url = window.location.href;
-  var url = "http://www.killsconstituents.com";
 
-  if ($.inArray( 'sf', ["http://www.killsconstituents.com", "http://killsconstituents"] ) >= 0) {
+  if ($.inArray( url, ["http://www.killsconstituents.com", "http://killsconstituents"] ) >= 0) {
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
