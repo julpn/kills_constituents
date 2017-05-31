@@ -3,63 +3,49 @@
 
 
 
-		<!-- navigation area -->
-
 		<div class="desktop">
 
 			<nav>
 
-
-          <div><a href="https://www.paybackproject.org/" target="_blank">Take Action</a></div>
+          <div><a href="https://www.indivisibleguide.com/stop-trumpcare/" target="_blank">Take Action</a></div>
 					<div class="share">Share</div>
-
 
 			</nav>
 
 		</div>
 
 
-		<!--central content-->
 
 		<div class="central_area">
 
-			<img src="images/icon-death-white.png" alt="icon-death-white" width="327" height="426">
+			<img src="images/icon-death-white.png" >
 
 			<div class="introduction"><b>The American Health Care Act (AHCA)</b> recently passed by the House of Representatives is estimated to result in 23 million people losing coverage and 21,807 deaths per year in the United States.</div>
 
-			<form class="find_form">
+			<form class="find_form" onsubmit="return submitAddress();">
 				<div class="explain"><b>Find out how your congressperson voted</b> and what the toll will be in your district:</div>
 
-				<input type="text" value="Full address: Street address, City, State" />
+				<input type="text" id="address" value="Full address: Street address, City, State" />
 
-				<input type="submit" value="GO" />
-<!-- 
-				<a href="current-location" class="current_location">Or use your current location</a> -->
-
-
+				<input type="submit" value="GO"/>
 
 			</form>
 
+      <form class="find_form" onsubmit="return submitCurrentLocation();">
+        <input type="submit" value="Or use your current location"/>
+      </form>
 
 
 		</div>
 
 
-		<!--central content END-->
-
-
-
-	</div>
-	<!-- nav area END-->
-
-
-		<!--popup start-->
 	<div class="popup"><div>
 
-		<img src="images/close_button.png" alt="close_button" class="close_button">
+		<img src="images/close_button.png" alt="close_button" class="close_button"></img>
 
 		<a href="https://www.facebook.com/sharer/sharer.php?u=http://jasonchaffetz.killsconstituents.com"><div class="button">Share on Facebook</div></a>
-		<a href="https://twitter.com/home?status=Congressman%20%40jasonchaffetz%20voted%20to%20kill%20498%20of%20his%20constituents%20by%202026%2C%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20pic.twitter.com/4gwVgJUG0i"><div class="button">Share on Twitter</div></a>
+    <br/>
+    <a href="https://twitter.com/home?status=Congressman%20%40jasonchaffetz%20voted%20to%20kill%20498%20of%20his%20constituents%20by%202026%2C%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20pic.twitter.com/4gwVgJUG0i"><div class="button">Share on Twitter</div></a>
 
 		<form>
 			<div class="title">Get updates:</div>
@@ -71,10 +57,6 @@
 
 
 	</div></div>
-	<!--popup END-->
-
-
-
 
 
 </body>

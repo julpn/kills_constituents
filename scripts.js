@@ -5,16 +5,13 @@ $(function() {
 
 	$(".popup").delay(15000).fadeIn(400);
 
-	$(".share").click(function() {
-		$(".popup").stop(true, true).fadeIn(400);
-	});
+  $('body').on('click','.popup .close_button', function(){
+     $(".popup").fadeOut(100);
+  });
 
-	$(".popup .close_button").click(function() {
-		$(".popup").fadeOut(400);
-	});
-
-
-
+  $('body').on('click','.share', function(){
+     $(".popup").stop(true, true).fadeIn(100);
+  });
 
 });
 
@@ -79,12 +76,12 @@ function updateContent(data) {
 $(document).ready(function(){
   // Get rep data
   var url = window.location.href;
-  console.log(url);
 
   if ($.inArray( url, ["http://www.killsconstituents.com", "http://killsconstituents"] ) >= 0) {
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
+  rep = "lizcheney";
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
   $.get( baseUrl + rep, function( data ) {
@@ -111,3 +108,105 @@ $(document).ready(function(){
     });
 
 });
+
+
+
+/// Address Searching
+
+function submitAddress(){
+  var geocoder = new google.maps.Geocoder();
+  address = document.getElementById('address').value;
+
+  geocoder.geocode({
+    'address': address,
+    'region': 'US',
+    'componentRestrictions': {
+      country: 'US',
+    }
+  }, function(results, status) {
+    if (status === 'OK') {
+      var lat = results[0].geometry.location.lat()
+      var lng = results[0].geometry.location.lng()
+      redirectToLegislator('latitude='+lat+'&longitude='+lng)
+    } else {
+      alert('Sorry, your district could not be found.');
+      console.log(status)
+    }
+  });
+  return false;
+};
+
+
+function submitZip(){
+  var zip = document.getElementById("zip").value;
+  redirectToLegislator('zip='+zip)
+  return false;
+};
+
+
+//For use current location, we need to use navigator.geolocation:
+function submitCurrentLocation(){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lng = position.coords.longitude;
+      redirectToLegislator('latitude='+lat+'&longitude='+lng)
+    }, function() {
+      //Geolocation service failed
+      alert("Sorry, your district could not be found.");
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    alert("Sorry, your district could not be found.");
+  }
+  return false;
+};
+
+
+
+//This function makes a request to the sunlightfoundation API. They say that an API key is needed, but it appears not...
+//JSONP is used for browser compatibility
+function redirectToLegislator(paramString){
+  var s = document.createElement('script');
+  s.src = 'https://congress.api.sunlightfoundation.com/legislators/locate?'+paramString+'&callback=redirectToLegislatorCallback';
+  document.body.appendChild(s);
+};
+
+//this function simply redirects to the first house member that fits the zip or lat long. For zip, we may want to disambiguate.
+//Also, we need to check if this congress person is on our list
+function redirectToLegislatorCallback(response) {
+  if('results' in response){
+    var legislators = response['results'];
+    for(var i = 0; i < legislators.length; i++){
+      if(legislators[i]['chamber'] == 'house'){
+        name = legislators[i]['first_name'] + legislators[i]['last_name'];
+        var twitter = legislators[i]['twitter_id'];
+        var state = legislators[i]['state'];
+        var district = legislators[i]['district'];
+        var cleanName = legislators[i]['first_name'] + " " + legislators[i]['last_name'];
+        checkIfRepublican(name, cleanName, state, district, twitter);
+      }
+    }
+  }
+};
+
+
+function checkIfRepublican(name, cleanName, state, district, twitter) {
+  var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
+  $.get( baseUrl + name, function( data ) {
+    $( ".result" ).html( data );
+    window.location.href = 'http://' + name + '.killsconstituents.com/';
+  }).fail(function(){
+    showDemocratDisplay(cleanName, state, district, twitter);
+  });
+};
+
+function showDemocratDisplay(cleanName, state, district, twitter) {
+  $("body").load('good_rep.html', function() {
+    var headline1 = "Representative (" + state + "-" + district + ")";
+    $("#headline1").text(headline1);
+    $("#headline2").text(cleanName);
+
+  });
+  $("body").removeAttr('class');
+}

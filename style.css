@@ -18,7 +18,29 @@
   display: inline-block;
   line-height: 1;
   cursor: pointer;
-  z-index: 2; }
+  z-index: 2;
+  left: 7px; }
+
+.button:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(images/lined-background.png);
+  background-size: 13px 10px;
+  position: absolute;
+  z-index: -2;
+  left: -7px;
+  bottom: -7px; }
+
+.button:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .find_page {
   background-color: black;
@@ -90,6 +112,37 @@
     .find_page .desktop nav div {
       border-color: black; }
 
+.top_area.good_rep {
+  min-height: 700px;
+  text-align: center; }
+  .top_area.good_rep .good_news {
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 25px;
+    font-size: 35px;
+    color: #f96643; }
+  .top_area.good_rep h1 span {
+    white-space:nowrap;
+    display: block;
+    margin: auto; }
+  .top_area.good_rep .search_again {
+    color: #f96643;
+    text-align: right;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 23px;
+    border: 1px solid white;
+    padding: 5px 10px 7px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .top_area.good_rep .search_again:hover {
+      background: black;
+      color: white;
+      border-color: black; }
+
 .popup {
   display: none;
   position: fixed;
@@ -118,7 +171,7 @@
     margin-bottom: 5px;
     white-space: nowrap; }
   .popup .button:last-of-type {
-    margin-bottom: 15px; }
+    margin-bottom: 24px; }
   .popup .button:hover {
     color: black;
     background: white; }
@@ -155,22 +208,22 @@
   .bottom_area .headline {
     font-style: italic;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 45px;
     margin-bottom: 45px;
     line-height: 1.1;
-
-  /*width: 200px; }*/}
+    width: 200px; }
   .bottom_area .left_column {
     width: 450px;
     padding-right: 110px;
     float: left; }
   .bottom_area .right_column {
-    width: calc(100%);
+    width: calc(100% - 450px);
     float: right; }
   .bottom_area .button {
     color: black;
     background: #ffde19;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    left: 10px; }
   .bottom_area .button:hover {
     background: white; }
   .bottom_area .testimonial {
@@ -190,6 +243,29 @@
     .bottom_area .written .location {
       color: #ffde19;
       text-align: right; }
+  .bottom_area .methodology {
+    background-image: url(images/icon-methodology.png); }
+    .bottom_area .methodology .title {
+      color: white;
+      font-weight: 900;
+      font-size: 23px;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      margin-bottom: 40px; }
+    .bottom_area .methodology a {
+      color: white;
+      text-decoration: underline; }
+    .bottom_area .methodology a:hover {
+      color: #ffde19; }
+    .bottom_area .methodology .subtitle {
+      font-size: 17px;
+      font-weight: 900;
+      color: #ffde19;
+      display: inline-block;
+      background: #ffde19;
+      padding: 0 5px;
+      color: black;
+      margin-right: 8px; }
 
 .top_area {
   background: #ffde19;
@@ -236,6 +312,8 @@
       z-index: 2;
       line-height: .7;
       vertical-align: text-top; }
+      .top_area .right_column .number.smaller {
+        font-size: 175px; }
     .top_area .right_column .number:after {
       background: url(images/lined-background.png);
       background-size: 13px 10px;
@@ -256,11 +334,20 @@
       display: inline-block;
       vertical-align: text-top;
       line-height: 0.9; }
+    .top_area .right_column .citation {
+      color: #f96643;
+      text-align: right;
+      font-weight: 900;
+      font-style: italic; }
+      .top_area .right_column .citation:hover {
+        color: black; }
     .top_area .right_column .cost .number {
       margin-left: 10px; }
     .top_area .right_column .death .number {
       font-size: 336px;
       line-height: .7; }
+      .top_area .right_column .death .number.smaller {
+        font-size: 284px; }
     .top_area .right_column .death .numbers_intro {
       font-size: 22px; }
     .top_area .right_column .death .label p {
@@ -290,10 +377,13 @@
       width: intrinsic;
       width: -moz-fit-content;
       width: -webkit-fit-content; }
+    .top_area h1.smaller span {
+      font-size: 41px; }
     .top_area h1 span:first-child {
       font-size: 24px;
       margin-bottom: 10px;
       padding-bottom: .2em;
+      padding-top: .1em;
       color: #f96643; }
     .top_area h1 span:nth-child(2) {
       padding-bottom: 0; }
@@ -515,6 +605,8 @@ button {
         max-width: 700px;
         margin-left: auto;
         margin-right: auto; }
+      .top_area .right_column h1 span {
+        font-size: 61px; }
     .top_area .left_column {
       float: none;
       padding-right: 0;
@@ -561,7 +653,7 @@ button {
   .image_container {
     margin-bottom: 30px; }
   .top_area h1 span {
-    font-size: 9vw; }
+    font-size: 7.2vw; }
   .top_area h1 span:first-child {
     font-size: 4vw; }
   .top_area h2 {
@@ -604,10 +696,14 @@ button {
     font-size: 17px;
     padding-left: 30px;
     padding-right: 30px; }
-  .find_page form {
+  .find_page .find_form {
     padding: 25px; }
-    .find_page form .explain {
+    .find_page .find_form .explain {
       font-size: 19px; } }
+
+@media only screen and (max-width: 550px) {
+  .top_area h1 span {
+    font-size: 10vw; } }
 
 @media only screen and (min-width: 767px) {
   .desktop_off {
