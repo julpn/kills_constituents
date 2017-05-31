@@ -81,7 +81,7 @@ $(document).ready(function(){
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
-  rep = "lizcheney";
+
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
   $.get( baseUrl + rep, function( data ) {
