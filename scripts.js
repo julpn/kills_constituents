@@ -57,7 +57,7 @@ function updateContent(data) {
 
   var url = window.location.href;
   $('#fbLink').attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + url);
-  $('#twitterLink').attr("href", "https://twitter.com/home?status=Congressman%20%40" data.first_name + "%20" + data.last_name "%20voted%20to%20kill%20" + data.killed + "%20of%20his%20constituents%20by%202026%2C%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20pic.twitter.com/4gwVgJUG0i");
+  $('#twitterLink').attr("href", "https://twitter.com/home?status=Congressman%20%40" + data.first_name + "%20" + data.last_name + "%20voted%20to%20kill%20" + data.killed + "%20of%20his%20constituents%20by%202026%2C%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20pic.twitter.com/4gwVgJUG0i");
 }
 
 
@@ -73,13 +73,15 @@ $(document).ready(function(){
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
+  rep = "nobody";
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
   $.get( baseUrl + rep, function( data ) {
     $( ".result" ).html( data );
     updateContent(data);
+  }).fail(function(){
+    renderHomePage();
   });
-
 
 	$("input:not(input[type='submit'])").focus(function() {
 
