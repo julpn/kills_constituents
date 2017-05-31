@@ -73,7 +73,7 @@ $(document).ready(function(){
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
-  rep = "nobody";
+
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
   $.get( baseUrl + rep, function( data ) {
