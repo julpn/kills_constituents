@@ -49,7 +49,7 @@ function updateContent(data) {
     pronoun = "he";
     possessive = "his";
   };
-  $("#pronoun").text(pronoun);
+  $("#possessive").text(possessive);
   title += (" (" + data.state + "-" + data.district + ")");
   $("#formalTitle").text(title);
 
