@@ -24,6 +24,7 @@ function updateContent(data) {
   $("#lastNameDescriptionA").text(data.last_name);
   $("#lastNameDescriptionB").text(data.last_name);
   $("#districtDescription").text(data.state);
+  $("#districtNumber").text(data.district);	
 
   $('#deathsBackground').attr('data-text', data.killed);
   $("#deaths").text(data.killed);
