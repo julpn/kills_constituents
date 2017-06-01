@@ -1,6 +1,3 @@
-
-
-
 $(function() {
 
 	$(".popup").delay(15000).fadeIn(400);
@@ -12,7 +9,6 @@ $(function() {
   $('body').on('click','.share', function(){
      $(".popup").stop(true, true).fadeIn(100);
   });
-
 });
 
 function renderHomePage() {
@@ -70,9 +66,6 @@ function updateContent(data) {
 
 
 
-//clear input fields on focus, return to origin value if blank
-
-
 $(document).ready(function(){
   // Get rep data
   var url = window.location.href;
@@ -81,7 +74,7 @@ $(document).ready(function(){
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
-
+ rep = "lizcheney";
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
   $.get( baseUrl + rep, function( data ) {
@@ -179,33 +172,35 @@ function redirectToLegislatorCallback(response) {
     var legislators = response['results'];
     for(var i = 0; i < legislators.length; i++){
       if(legislators[i]['chamber'] == 'house'){
-        name = legislators[i]['first_name'] + legislators[i]['last_name'];
+        var firstName = legislators[i]['first_name']
+        var lastName = legislators[i]['last_name'];
         var twitter = legislators[i]['twitter_id'];
         var state = legislators[i]['state'];
         var district = legislators[i]['district'];
-        var cleanName = legislators[i]['first_name'] + " " + legislators[i]['last_name'];
-        checkIfRepublican(name, cleanName, state, district, twitter);
+        checkIfRepublican(firstName, lastName, state, district, twitter);
       }
     }
   }
 };
 
 
-function checkIfRepublican(name, cleanName, state, district, twitter) {
+function checkIfRepublican(firstName, lastName, state, district, twitter) {
+  var name = firstName + lastName;
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
   $.get( baseUrl + name, function( data ) {
     $( ".result" ).html( data );
     window.location.href = 'http://' + name + '.killsconstituents.com/';
   }).fail(function(){
-    showDemocratDisplay(cleanName, state, district, twitter);
+    showDemocratDisplay(firstName, lastName, state, district, twitter);
   });
 };
 
-function showDemocratDisplay(cleanName, state, district, twitter) {
+function showDemocratDisplay(firstName, lastName, state, district, twitter) {
   $("body").load('good_rep.html', function() {
-    var headline1 = "Representative (" + state + "-" + district + ")";
-    $("#headline1").text(headline1);
-    $("#headline2").text(cleanName);
+    var headlineTitle = "Representative (" + state + "-" + district + ")";
+    $("#headlineTitle").text(headlineTitle);
+    $("#headlineFirstName").text(firstName);
+    $("#headlineLastName").text(lastName);
 
   });
   $("body").removeAttr('class');
