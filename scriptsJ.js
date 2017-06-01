@@ -24,7 +24,7 @@ function updateContent(data) {
   $("#lastNameDescriptionA").text(data.last_name);
   $("#lastNameDescriptionB").text(data.last_name);
   $("#districtDescription").text(data.state);
-  $("#districtNumber").text(data.district);	
+  $("#districtNumber").text(data.district);
 
   $('#deathsBackground').attr('data-text', data.killed);
   $("#deaths").text(data.killed);
@@ -75,7 +75,7 @@ $(document).ready(function(){
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
- rep = "lizcheney";
+
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
   $.get( baseUrl + rep, function( data ) {
