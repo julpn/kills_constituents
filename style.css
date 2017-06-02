@@ -45,7 +45,7 @@
 .find_page {
   background-color: black;
   background-image: url(images/home-lined-background.png);
-  background-size: 13px 10px;
+  background-size: 20px 10px;
   color: white; }
   .find_page .central_area {
     left: 50%;
@@ -68,14 +68,21 @@
     .find_page .introduction b {
       color: #ffde19;
       font-weight: 900; }
-  .find_page .current_location {
-    font-size: 1.4rem;
-    font-weight: 900;
-    text-decoration: underline;
-    display: inline-block; }
   .find_page .find_form {
     background: #f96643;
     padding: 50px; }
+    .find_page .find_form .current_location input[type="submit"] {
+      font-size: 1.4rem;
+      font-weight: 900;
+      text-decoration: underline;
+      display: inline-block;
+      background: none;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 0;
+      font-family: 'Montserrat', sans-serif; }
+      .find_page .find_form .current_location input[type="submit"]:hover {
+        background: none; }
     .find_page .find_form .explain {
       font-size: 25px;
       line-height: 1.2;
@@ -122,7 +129,6 @@
     font-size: 35px;
     color: #f96643; }
   .top_area.good_rep h1 span {
-    white-space:nowrap;
     display: block;
     margin: auto; }
   .top_area.good_rep .search_again {
@@ -506,7 +512,7 @@ button {
 
 .desktop nav {
   padding-top: 35px;
-  max-width: 196px;
+  max-width: 257px;
   text-align: justify; }
   .desktop nav div {
     display: inline-block;
@@ -607,6 +613,9 @@ button {
         margin-right: auto; }
       .top_area .right_column h1 span {
         font-size: 61px; }
+      .top_area .right_column .citation {
+        text-align: center;
+        margin-bottom: 15px; }
     .top_area .left_column {
       float: none;
       padding-right: 0;
