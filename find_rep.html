@@ -1,4 +1,5 @@
 
+
 <body class="find_page">
 
 
@@ -6,8 +7,9 @@
 		<div class="desktop">
 
 			<nav>
-
-          <div><a href="https://www.indivisibleguide.com/stop-trumpcare/" target="_blank">Take Action</a></div>
+				
+					<div>Home</div>
+					<div><a href="https://www.indivisibleguide.com/stop-trumpcare/" target="_blank">Take Action</a></div>
 					<div class="share">Share</div>
 
 			</nav>
@@ -22,18 +24,24 @@
 
 			<div class="introduction"><b>The American Health Care Act (AHCA)</b> recently passed by the House of Representatives is estimated to result in 23 million people losing coverage and 21,807 deaths per year in the United States.</div>
 
-			<form class="find_form" onsubmit="return submitAddress();">
+		<div class="find_form">
+
+			<form onsubmit="return submitAddress();">
 				<div class="explain"><b>Find out how your congressperson voted</b> and what the toll will be in your district:</div>
 
 				<input type="text" id="address" value="Full address: Street address, City, State" />
 
-				<input type="submit" value="GO"/>
+				<input type="submit" value="GO" class="go"/>
 
 			</form>
 
-      <form class="find_form" onsubmit="return submitCurrentLocation();">
-        <input type="submit" value="Or use your current location"/>
-      </form>
+	      <form onsubmit="return submitCurrentLocation();" class="current_location">
+	        <input type="submit" value="Or use your current location" />
+	      </form>
+      
+		</div>
+      
+
 
 
 		</div>
