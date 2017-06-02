@@ -18,6 +18,7 @@ function renderHomePage() {
 
 
 function updateContent(data) {
+	
   $("#firstName").text(data.first_name);
   $("#lastName").text(data.last_name);
   $("#lastNameParagraph").text(data.last_name);
@@ -57,11 +58,15 @@ function updateContent(data) {
 
   var url = window.location.href;
   $('#fbLink').attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + url);
-  $('#twitterLink').attr("href", "https://twitter.com/home?status=Congressman%20%40" + data.twitter_handle + "%20voted%20to%20kill%20" + data.killed + "%20of%20" + possessive + "%20constituents%20by%202026%2C%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20pic.twitter.com/4gwVgJUG0i");
+  $('#twitterLink').attr("href", "https://twitter.com/home?status=Congressman%20%40" + data.twitter_handle + "%20voted%20to%20kill%20" + data.killed + "%20of%20" + possessive + "%20constituents%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20" + data.last_name + ".killsconstituents.com");
   var fbPost = "Within " + possessive + " district alone, " + title + " " + data.last_name + "'s vote will cost about " + data.killed + " lives by 2026 and cause " + data.uninsured + " to lose healthcare coverage.";
   $('meta[name=og\\:description]').attr('content', fbPost);
   $('meta[name=og\\:url]').attr('content', url);
   $('meta[name=og\\:site_name]').attr('content', data.first_name + " " + data.last_name + " Kills Constituents");
+
+  var page_title = title + " " + data.first_name + " " + data.last_name + " voted to kill " + data.killed + " of his constituents by repealing the Affordable Care Act";
+  $("title").text(page_title);
+
 
 }
 
@@ -75,6 +80,7 @@ $(document).ready(function(){
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
+  
 
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
@@ -85,21 +91,29 @@ $(document).ready(function(){
     renderHomePage();
   });
 
-	$("input:not(input[type='submit'])").focus(function() {
 
+
+//clear input fields on focus, return to origin value if blank
+	
+	$("input:not(input[type='submit'])").focus(function() {	
+		
 		if ($(this).val() == $(this).attr('value')) {
 			$(this).val('');
 		}
+	
+    });        
 
-    });
-
-	$("input").blur(function() {
-
+	$("input").blur(function() {	
+		
 		if ($(this).val() == '') {
-			$(this).val($(this).attr('value'));
+			$(this).val($(this).attr('value'));	
 		}
+		
+    });    
 
-    });
+
+
+
 
 });
 
