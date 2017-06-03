@@ -12,13 +12,12 @@ $(function() {
 });
 
 function renderHomePage() {
-  $("body").load('find_rep.html');
+  $("body").load('extra_html/find_rep.html');
   $("body").addClass("find_page");
 };
 
 
 function updateContent(data) {
-	
   $("#firstName").text(data.first_name);
   $("#lastName").text(data.last_name);
   $("#lastNameParagraph").text(data.last_name);
@@ -66,10 +65,7 @@ function updateContent(data) {
 
   var page_title = title + " " + data.first_name + " " + data.last_name + " voted to kill " + data.killed + " of his constituents by repealing the Affordable Care Act";
   $("title").text(page_title);
-
-
 }
-
 
 
 $(document).ready(function(){
@@ -80,7 +76,7 @@ $(document).ready(function(){
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
-  
+  var rep = "lizcheney";
 
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
@@ -92,24 +88,23 @@ $(document).ready(function(){
   });
 
 
-
 //clear input fields on focus, return to origin value if blank
-	
-	$("input:not(input[type='submit'])").focus(function() {	
-		
+
+	$("input:not(input[type='submit'])").focus(function() {
+
 		if ($(this).val() == $(this).attr('value')) {
 			$(this).val('');
 		}
-	
-    });        
 
-	$("input").blur(function() {	
-		
+    });
+
+	$("input").blur(function() {
+
 		if ($(this).val() == '') {
-			$(this).val($(this).attr('value'));	
+			$(this).val($(this).attr('value'));
 		}
-		
-    });    
+
+    });
 
 
 
@@ -211,7 +206,7 @@ function checkIfRepublican(firstName, lastName, state, district, twitter) {
 };
 
 function showDemocratDisplay(firstName, lastName, state, district, twitter) {
-  $("body").load('good_rep.html', function() {
+  $("body").load('extra_html/good_rep.html', function() {
     var headlineTitle = "Representative (" + state + "-" + district + ")";
     $("#headlineTitle").text(headlineTitle);
     $("#headlineFirstName").text(firstName);
