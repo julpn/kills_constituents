@@ -72,7 +72,7 @@ $(document).ready(function(){
   // Get rep data
   var url = window.location.href;
 
-  if ((url.split(".").length - 1) > 1) {
+  if ((url.split(".").length - 1) < 2) {
     renderHomePage();
   } else {
     var rep = url.split(".")[0].replace("http://", "");
