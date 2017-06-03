@@ -72,11 +72,10 @@ $(document).ready(function(){
   // Get rep data
   var url = window.location.href;
 
-  if ($.inArray( url, ["http://www.killsconstituents.com", "http://killsconstituents"] ) >= 0) {
+  if ($.inArray( url, ["http://www.killsconstituents.com/", "http://killsconstituents.com/"] ) >= 0) {
     renderHomePage();
   };
   var rep = url.split(".")[0].replace("http://", "");
-  var rep = "lizcheney";
 
   var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
 
