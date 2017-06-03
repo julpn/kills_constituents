@@ -72,7 +72,7 @@ $(document).ready(function(){
   // Get rep data
   var url = window.location.href;
 
-  if ($.inArray( url, ["http://www.killsconstituents.com/", "http://killsconstituents.com/"] ) >= 0) {
+  if ((url.split(".").length - 1) > 1) {
     renderHomePage();
   } else {
     var rep = url.split(".")[0].replace("http://", "");
