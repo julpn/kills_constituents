@@ -74,17 +74,18 @@ $(document).ready(function(){
 
   if ($.inArray( url, ["http://www.killsconstituents.com/", "http://killsconstituents.com/"] ) >= 0) {
     renderHomePage();
+  } else {
+    var rep = url.split(".")[0].replace("http://", "");
+
+    var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
+
+    $.get( baseUrl + rep, function( data ) {
+      $( ".result" ).html( data );
+      updateContent(data);
+    }).fail(function(){
+      renderHomePage();
+    });
   };
-  var rep = url.split(".")[0].replace("http://", "");
-
-  var baseUrl = 'https://ahca.herokuapp.com/api/?rep=';
-
-  $.get( baseUrl + rep, function( data ) {
-    $( ".result" ).html( data );
-    updateContent(data);
-  }).fail(function(){
-    renderHomePage();
-  });
 
 
 //clear input fields on focus, return to origin value if blank

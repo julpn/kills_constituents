@@ -215,7 +215,7 @@
     font-style: italic;
     font-weight: 900;
     font-size: 45px;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     line-height: 1.1;
     width: 200px; }
   .bottom_area .left_column {
@@ -417,6 +417,10 @@ img {
   -ms-interpolation-mode: bicubic;
   height: auto;
   width: auto; }
+  .social {
+    margin: 10px;
+    height: 30px;
+  }
 
 html {
   font-size: 10px;
@@ -469,6 +473,12 @@ h1, h2, h3, h4, h5, h6 {
 
 button {
   font-family: inherit; }
+
+#social-img {
+  width: 42px;
+  height: 42px;
+  margin: 5px;
+}
 
 .embed-container {
   position: relative;
