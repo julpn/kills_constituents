@@ -1,5 +1,5 @@
-$(function() {
 
+$(function() {
 	$(".popup").delay(15000).fadeIn(400);
 
   $('body').on('click','.popup .close_button', function(){
@@ -14,6 +14,13 @@ $(function() {
 function renderHomePage() {
   $("body").load('extra_html/find_rep.html');
   $("body").addClass("find_page");
+};
+
+function renderSubdomain(data){
+  $("body").load('extra_html/subdomain.html', function() {
+    $("body").addClass("allContent");
+    updateContent(data);
+  });
 };
 
 
@@ -63,16 +70,17 @@ function updateContent(data) {
   $('meta[name=og\\:url]').attr('content', url);
   $('meta[name=og\\:site_name]').attr('content', data.first_name + " " + data.last_name + " Kills Constituents");
 
-  var page_title = title + " " + data.first_name + " " + data.last_name + " voted to kill " + data.killed + " of his constituents by repealing the Affordable Care Act";
+  var page_title = title + " " + data.first_name + " " + data.last_name + " voted to kill " + data.killed + " of " + possessive + " constituents by repealing the Affordable Care Act";
   $("title").text(page_title);
 }
 
 
 $(document).ready(function(){
-  // Get rep data
+  // Render html depending on location
   var url = window.location.href;
 
-  if ((url.split(".").length - 1) < 2) {
+  var homepages = ["http://killsconstituents.com/", "http://www.killsconstituents.com/", "https://killsconstituents.com/"];
+  if ($.inArray(url, homepages) !== -1) {
     renderHomePage();
   } else {
     var rep = url.split(".")[0].replace("http://", "");
@@ -81,37 +89,21 @@ $(document).ready(function(){
 
     $.get( baseUrl + rep, function( data ) {
       $( ".result" ).html( data );
+      renderSubdomain(data);
       updateContent(data);
     }).fail(function(){
-      renderHomePage();
+      renderHomePage(); // if subdomain is not found then render homepage
     });
   };
 
-
-//clear input fields on focus, return to origin value if blank
-
-	$("input:not(input[type='submit'])").focus(function() {
-
-		if ($(this).val() == $(this).attr('value')) {
-			$(this).val('');
-		}
-
-    });
-
-	$("input").blur(function() {
-
-		if ($(this).val() == '') {
-			$(this).val($(this).attr('value'));
-		}
-
-    });
-
-
-
-
+  $('body').on('focus','.input', function(){
+     $(".input").val("");
+  });
+  $('body').on('click','.input', function(event){
+     $(".input").val("");
+  });
 
 });
-
 
 
 /// Address Searching
