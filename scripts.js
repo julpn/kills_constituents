@@ -222,4 +222,14 @@ function showDemocratDisplay(firstName, lastName, state, district, twitter) {
 
   });
   $("body").removeAttr('class');
-}
+};
+
+function randomRedirect(){
+  var randomUrl = 'https://ahca.herokuapp.com/api/random/'
+  $.get( randomUrl, function( data ) {
+    $( ".result" ).html( data );
+    if (data.first_name && data.last_name) {
+      window.location.href = 'http://' + data.first_name + data.last_name + '.killsconstituents.com/';
+    }
+  });
+};
