@@ -74,13 +74,29 @@ function updateContent(data) {
   $("title").text(page_title);
 }
 
+function otherPages(url) {
+  var otherPage = false;
+  otherPages = ["about", "resources"];
+
+  otherPages.forEach(function (page) {
+    if (url.includes(page)) {
+      otherPage = true;
+    }
+  });
+  return otherPage;
+}
+
 
 $(document).ready(function(){
   // Render html depending on location
   var url = window.location.href;
 
   var homepages = ["http://killsconstituents.com/", "http://www.killsconstituents.com/", "https://killsconstituents.com/"];
-  if ($.inArray(url, homepages) !== -1) {
+  var otherPage = otherPages(url);
+
+  if (otherPage) {
+    return;
+  } else if ($.inArray(url, homepages) !== -1) {
     renderHomePage();
   } else {
     var rep = url.split(".")[0].replace("http://", "");
