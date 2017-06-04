@@ -76,7 +76,7 @@ function updateContent(data) {
 
 function otherPages(url) {
   var otherPage = false;
-  otherPages = ["about", "resources"];
+  otherPages = ["about", "action"];
 
   otherPages.forEach(function (page) {
     if (url.includes(page)) {

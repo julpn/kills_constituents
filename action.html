@@ -20,6 +20,7 @@
 			  crossorigin="anonymous"></script>
 
 	<script src="scripts.js?v=4"></script>
+  <script src="scriptsActions.js?v=4"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUxtgLLkclTTQNtTCKvNfjGwXrg1jI9fE"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -50,7 +51,7 @@
 
 </head>
 
-<body class="find_page">
+<body class="action_page">
   <div class="top_area"><div>
 
 		<!-- navigation area -->
@@ -59,8 +60,7 @@
 
 			<nav>
 
-					<div>Home</div>
-					<div><a href="https://www.paybackproject.org/" target="_blank">Take Action</a></div>
+					<div><a href="./index.html">Home</a></div>
 					<div class="share">Share</div>
 
 
@@ -75,9 +75,9 @@
 		<!--left column start-->
 		<div class="left_column">
 
-			<div class="headline">About this site</div>
-      <a href="https://twitter.com/ahcakills/" target="_blank"><img id="social-img" src="images/twitter_white.png" alt="AHCA Kills">
-      <a href="https://www.facebook.com/AHCAKills/" target="_blank"><img id="social-img" src="images/facebook_white.png" alt="AHCA Kills">
+			<div class="headline">Take Action</div>
+      <a href="https://twitter.com/ahcakills/" target="_blank"><img id="social-img" src="images/twitter_white.png" alt="AHCA Kills"></a>
+      <a href="https://www.facebook.com/AHCAKills/" target="_blank"><img id="social-img" src="images/facebook_white.png" alt="AHCA Kills"></a>
 
 		</div>
 		<!--left column END-->
@@ -87,32 +87,41 @@
 
 
 			<!--written testimonial-->
-			<div class="testimonial written">
+			<div class="testimonial show_up">
+        <p class="title">SHOW UP IN PERSON</p>
+        <p>Attending a town hall or visiting an office sends the strongest message to your rep that you’ll fight for your health care. If your rep won’t come talk to you, show up at their district office or organize an "empty chair" town hall without them.</p>
+        <a class="subtitle" href="https://townhallproject.com/" target="_blank">Find a Town Hall Near You...</a>
 
-        <p>KillsConstituents.com is not affiliated with any political party or candidate. The site was developed by a small group of private citizens to hold members of Congress accountable for what their health care legislation will do to the people they represent in their districts. We've made our projections as accurate as possible, using the best expert analysis publicly available. </p>
-			</div>
+        <br><br><p>Work with other activists to strategize together and enhance your strength!</p>
+        <a class="subtitle" href="https://www.indivisibleguide.com/act-locally/" target="_blank">Organize with Others...</a>
 
-      <a name="methodology"></a>
-        <div class="methodology testimonial written">
+        <br><br><p>“Bird Dogging” is a direct democracy tactic — following reps around to make sure they can’t ignore an issue. If you can get 15+ people together, you can email the “Bird Dog For Health” team and set up a training session to make your voices ring out.</p>
+        <a class="subtitle" href="mailto:birddog4health@gmail.com?Subject=Bird%20Dog%20Training" target="_blank">Get Your Own "Bird Dog" Training...</a>
+      </div>
 
-          <div class="title">Methodology</div>
+      <div class="testimonial donate">
+        <p class="title">VOTE WITH YOUR WALLET</p>
+        <p>Putting your money where your mouth is lets your rep know they’re in real trouble. Tell your friends, family, and your rep themselves why you’re punishing their AHCA vote.</p>
+        <a class="subtitle" href="https://swingleft.org/district-funds" target="_blank">Donate to a Swing Left District Fund...</a>
+      </div>
 
+      <div class="testimonial contact">
+        <p class="title">CONTACT YOUR REP</p>
+        <p>Publicly shame their vote. Tell them you’re a constituent, and why your health care is important to you</p>
+        <a class="subtitle" id="actionTwitterLink" href="https://twitter.com/home?status=The%20House%20of%20Reps%20voted%20to%20kill%2021%2C807%20of%20their%20constituents%20by%202026%2C%20by%20repealing%20%23ACA%20(according%20to%20%40USCBO)%20pic.twitter.com%2F4gwVgJUG0i" target="_blank">Tweet it...</a>
 
+        <br><br><p>Give them a call and tell them you want a town hall to talk about their AHCA vote. <span id="actionPhoneNumber"></span></p>
+        <a class="subtitle" href="http://www.house.gov/representatives/find/" target="_blank">Find More Contact Info...</a>
 
-          <p><span class="subtitle">Deaths: </span>Based on the <a href="https://www.cbo.gov/system/files/115th-congress-2017-2018/costestimate/hr1628aspassed.pdf">CBO report</a>, <a href="https://www.americanprogress.org/issues/healthcare/news/2017/05/25/433017/cbo-derived-coverage-losses-state-congressional-district/">Center for American Progress analysis</a>, and a <a href="http://annals.org/aim/article/1867050/changes-mortality-after-massachusetts-health-care-reform-quasi-experimental-study">2014 Annals of Internal Medicine study</a> linking insurance rates to death rates.</p>
+        <br><br><p>Email or write them and post the letter publicly, so that other people know you care. </p>
+        <a class="subtitle" id="actionMail" href="http://www.house.gov/representatives/find/" target="_blank">Write Them Now...</a>
+      </div>
 
-          <p>Also an <a href="https://www.vice.com/en_us/article/how-many-people-will-die-if-republicans-pass-trumpcare">article from Vice</a> summing up the "death rate" research.</p>
-
-
-
-          <p><span class="subtitle">Insurance loss:</span>Based on analysis of the <a href="https://www.cbo.gov/system/files/115th-congress-2017-2018/costestimate/hr1628aspassed.pdf">CBO report</a> from the <a href="https://www.americanprogress.org/issues/healthcare/news/2017/05/25/433017/cbo-derived-coverage-losses-state-congressional-district/">Center for American Progress</a>.</p>
-
-
-
-          <p><span  class="subtitle">Premium increase:</span>Based on <a href="http://blog.aarp.org/2017/05/25/stability-fund-wont-keep-premiums-from-going-through-the-roof-for-people-with-preexisting-conditions/">analysis from the AARP</a>.</p>
-
-
-        </div>
+      <div class="testimonial senate">
+        <p class="title">THE SENATE IS NEXT</p>
+        <p>The Senate will vote on their own version of the bill soon. They say it will keep “70 to 80 percent” of the AHCA. Tell them you’re 100% opposed to any version of TrumpCare, and that you’re willing to show up, vote, and donate to stand up for your rights.</p>
+        <a class="subtitle" href="https://www.senate.gov/senators/contact/" target="_blank">Speak Out...</a>
+      </div>
 
 
 		</div></div>

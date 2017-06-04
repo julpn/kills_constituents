@@ -149,6 +149,53 @@
       color: white;
       border-color: black; }
 
+
+.action_page {
+}
+  .action_page .bottom_area .headline {
+    font-size: 40px; }
+
+  .action_page .bottom_area .donate {
+    padding-left: 110px;
+    background: url(images/money.png) no-repeat top left;
+    background-size: 60px 60px;  }
+  .action_page .bottom_area .show_up {
+    padding-left: 110px;
+    background: url(images/people.png) no-repeat top left;
+    background-size: 60px 60px; }
+  .action_page .bottom_area .contact {
+      padding-left: 110px;
+      background: url(images/phone.png) no-repeat top left;
+      background-size: 60px 60px; }
+  .action_page .bottom_area .senate {
+      padding-left: 110px;
+      background: url(images/health.png) no-repeat top left;
+      background-size: 60px 60px; }
+  .action_page .subtitle {
+    font-size: 17px;
+    font-weight: 900;
+    color: #ffde19;
+    display: inline-block;
+    background: #ffde19;
+    padding: 0 5px;
+    color: black;
+    margin-right: 8px; }
+  .action_page .title {
+    color: white;
+    font-weight: 900;
+    font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-bottom: 10px; }
+  .action_page .action_link {
+    margin-top: 10px;
+    font-size: 17px;
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
 .popup {
   display: none;
   position: fixed;
