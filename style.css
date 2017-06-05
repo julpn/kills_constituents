@@ -139,6 +139,7 @@
     font-size: 23px;
     border: 1px solid white;
     padding: 5px 10px 7px;
+    cursor: pointer;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -148,53 +149,6 @@
       background: black;
       color: white;
       border-color: black; }
-
-
-.action_page {
-}
-  .action_page .bottom_area .headline {
-    font-size: 40px; }
-
-  .action_page .bottom_area .donate {
-    padding-left: 110px;
-    background: url(images/money.png) no-repeat top left;
-    background-size: 60px 60px;  }
-  .action_page .bottom_area .show_up {
-    padding-left: 110px;
-    background: url(images/people.png) no-repeat top left;
-    background-size: 60px 60px; }
-  .action_page .bottom_area .contact {
-      padding-left: 110px;
-      background: url(images/phone.png) no-repeat top left;
-      background-size: 60px 60px; }
-  .action_page .bottom_area .senate {
-      padding-left: 110px;
-      background: url(images/health.png) no-repeat top left;
-      background-size: 60px 60px; }
-  .action_page .subtitle {
-    font-size: 17px;
-    font-weight: 900;
-    color: #ffde19;
-    display: inline-block;
-    background: #ffde19;
-    padding: 0 5px;
-    color: black;
-    margin-right: 8px; }
-  .action_page .title {
-    color: white;
-    font-weight: 900;
-    font-size: 23px;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-bottom: 10px; }
-  .action_page .action_link {
-    margin-top: 10px;
-    font-size: 17px;
-    color: white;
-    font-weight: 900;
-    font-style: italic;
-    text-decoration: underline;
-  }
 
 .popup {
   display: none;
@@ -222,7 +176,8 @@
     background: black;
     color: white;
     margin-bottom: 5px;
-    white-space: nowrap; }
+    white-space: nowrap;
+    left: 0; }
   .popup .button:last-of-type {
     margin-bottom: 24px; }
   .popup .button:hover {
@@ -262,7 +217,7 @@
     font-style: italic;
     font-weight: 900;
     font-size: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     line-height: 1.1;
     width: 200px; }
   .bottom_area .left_column {
@@ -464,10 +419,6 @@ img {
   -ms-interpolation-mode: bicubic;
   height: auto;
   width: auto; }
-  .social {
-    margin: 10px;
-    height: 30px;
-  }
 
 html {
   font-size: 10px;
@@ -521,12 +472,6 @@ h1, h2, h3, h4, h5, h6 {
 button {
   font-family: inherit; }
 
-#social-img {
-  width: 42px;
-  height: 42px;
-  margin: 5px;
-}
-
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -569,8 +514,7 @@ button {
 
 .desktop nav {
   padding-top: 35px;
-  max-width: 257px;
-  text-align: justify; }
+  text-align: left; }
   .desktop nav div {
     display: inline-block;
     font-size: 1.5rem;
@@ -580,7 +524,10 @@ button {
     bottom: 0;
     border-bottom: 5px solid #ffde19;
     font-weight: 900;
-    color: #f96643; }
+    color: #f96643;
+    margin-right: 35px; }
+    .desktop nav div:last-child {
+      margin-right: 0; }
     .desktop nav div:hover {
       border-color: #f96643;
       bottom: 5px;
@@ -655,7 +602,13 @@ button {
 
 @media only screen and (max-width: 1200px) {
   .desktop nav, .find_page .desktop nav {
-    margin: auto; }
+    margin: auto;
+    text-align: center; }
+  .action_page .bottom_area .testimonial {
+    padding-left: 0;
+    padding-top: 85px;
+    background-position: top center;
+    background-size: 55px 55px; }
   .top_area {
     text-align: center; }
     .top_area .right_column {
@@ -702,6 +655,9 @@ button {
       padding-top: 85px;
       background-position: top center;
       background-size: 55px 55px; }
+      .bottom_area .right_column .written.about {
+        background: none;
+        padding-top: 0; }
       .bottom_area .right_column .written .name {
         text-align: center; }
       .bottom_area .right_column .written .location {
@@ -742,13 +698,15 @@ button {
   .popup {
     padding-top: 75px; }
     .popup > div {
-      padding: 70px 20px 30px; }
+      padding: 70px 70px 50px; }
     .popup form .title {
       font-size: 7vw; }
     .popup .button {
       font-size: 10vw; }
     .popup input[type="text"] {
       width: 100%; }
+    .popup a {
+      display: block; }
   .find_page .central_area {
     position: relative;
     transform: none;
