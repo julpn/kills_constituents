@@ -342,9 +342,14 @@ $salmon: #f96643;
 	top: 0;
 	left: 0;
 	
+	
+	a {
+		display: block;
+	}
+	
 	&>div {
 		@include absolute_center();
-		padding: 50px 70px;
+		padding: 70px 70px 50px;
 		max-width: 90%;
 		background: $yellow;
 		text-align: center;
@@ -481,7 +486,7 @@ $salmon: #f96643;
 		margin-bottom: 30px;
 		border-bottom: 1px solid $salmon;
 		padding-left: 110px;
-		background-image: url(images/icon-testimonial.png) no-repeat top left;
+		background: url(images/icon-testimonial.png) no-repeat top left;
 		background-size: 85px 85px;	
 		
 		.title {
@@ -502,7 +507,7 @@ $salmon: #f96643;
 			color: $yellow;
 		}
 		
-		subtitle {
+		.subtitle {
 			font-size: 17px;
 			font-weight: 900;
 			color: $yellow;
@@ -511,8 +516,11 @@ $salmon: #f96643;
 			padding: 0 5px;
 			color: black;
 			margin-right: 8px;
-						
+			text-decoration: none;		
+			@include transition(.2s);		
 		}
+		
+		
 		
 		a.subtitle:hover {
 			color: black;
@@ -520,19 +528,19 @@ $salmon: #f96643;
 		}
 		
 		
-		&>.show_up {
+		&.show_up {
 			background-image: url(images/people.png);
 		}
 		
-		&>.donate{
+		&.donate{
 				background-image: url(images/money.png);
 			}
 			
-		&>.contact {
+		&.contact {
 			background-image: url(images/phone.png);
 		}
 		
-		&>.senate{
+		&.senate{
 			background-image: url(images/health.png);
 		}
 		
@@ -784,7 +792,35 @@ $salmon: #f96643;
 }
 
 
+// action page
 
+.action_page {
+	
+
+		
+		.right_column {
+			width: calc(100% - 250px);
+		}
+		
+		.left_column {
+			width: 250px;
+		}
+	
+		.testimonial {
+		
+			.title {
+				font-size: 32px;
+				font-style: italic;
+				text-transform: none;
+				margin-bottom: 20px;
+				line-height: 1.1;
+	
+			}
+		
+		}
+	
+
+}
 
 
 
@@ -1078,25 +1114,7 @@ button {
 	.desktop nav, .find_page .desktop nav {
 		margin: auto;
 		text-align: center;
-	}
-	
-	.action_page {
-		
-		.bottom_area {
-			
-			.testimonial {
-				
-				padding-left: 0;
-				padding-top: 85px;
-				background-position: top center;
-				background-size: 55px 55px;
-				
-			}
-		}
-		
-	}
-	
-	
+	}	
 	
 	.top_area {
 		
@@ -1225,6 +1243,29 @@ $standard_margin_vertical: 30px;
 $standard_margin_horizontal: 30px;
 
 
+	.action_page {
+		
+		.bottom_area {
+			
+			.testimonial {
+				
+				padding-left: 0;
+				padding-top: 85px;
+				background-position: top center;
+				background-size: 55px 55px;
+				
+			}
+			
+		.title {
+			text-align: center;
+		}
+		
+		}
+		
+	}
+	
+
+
 	body {
 		font-size: 1.8rem !important;
 		line-height: 1.4;
@@ -1313,7 +1354,7 @@ $standard_margin_horizontal: 30px;
 		padding-top: 75px;
 		
 		&>div {
-			padding: 70px 70px 50px;
+			padding: 70px 30px 30px;
 		}
 		
 		
@@ -1335,10 +1376,7 @@ $standard_margin_horizontal: 30px;
 		input[type="text"] {
 			width: 100%;
 		}
-		
-		a {
-			display: block;
-		}
+
 		
 	}
 		

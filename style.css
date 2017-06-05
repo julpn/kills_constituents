@@ -164,6 +164,8 @@
   z-index: 10;
   top: 0;
   left: 0; }
+  .popup a {
+    display: block; }
   .popup > div {
     left: 50%;
     top: 50%;
@@ -173,7 +175,7 @@
     -ms-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     position: absolute;
-    padding: 50px 70px;
+    padding: 70px 70px 50px;
     max-width: 90%;
     background: #ffde19;
     text-align: center; }
@@ -244,7 +246,7 @@
     margin-bottom: 30px;
     border-bottom: 1px solid #f96643;
     padding-left: 110px;
-    background-image: url(images/icon-testimonial.png) no-repeat top left;
+    background: url(images/icon-testimonial.png) no-repeat top left;
     background-size: 85px 85px; }
     .bottom_area .testimonial .title {
       color: white;
@@ -258,7 +260,7 @@
       text-decoration: underline; }
     .bottom_area .testimonial a:hover {
       color: #ffde19; }
-    .bottom_area .testimonial subtitle {
+    .bottom_area .testimonial .subtitle {
       font-size: 17px;
       font-weight: 900;
       color: #ffde19;
@@ -266,17 +268,23 @@
       background: #ffde19;
       padding: 0 5px;
       color: black;
-      margin-right: 8px; }
+      margin-right: 8px;
+      text-decoration: none;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
     .bottom_area .testimonial a.subtitle:hover {
       color: black;
       background: white; }
-    .bottom_area .testimonial > .show_up {
+    .bottom_area .testimonial.show_up {
       background-image: url(images/people.png); }
-    .bottom_area .testimonial > .donate {
+    .bottom_area .testimonial.donate {
       background-image: url(images/money.png); }
-    .bottom_area .testimonial > .contact {
+    .bottom_area .testimonial.contact {
       background-image: url(images/phone.png); }
-    .bottom_area .testimonial > .senate {
+    .bottom_area .testimonial.senate {
       background-image: url(images/health.png); }
   .bottom_area .testimonial:last-child {
     border: none; }
@@ -408,6 +416,19 @@
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 15px; }
+
+.action_page .right_column {
+  width: calc(100% - 250px); }
+
+.action_page .left_column {
+  width: 250px; }
+
+.action_page .testimonial .title {
+  font-size: 32px;
+  font-style: italic;
+  text-transform: none;
+  margin-bottom: 20px;
+  line-height: 1.1; }
 
 a {
   outline: none;
@@ -612,11 +633,6 @@ button {
   .desktop nav, .find_page .desktop nav {
     margin: auto;
     text-align: center; }
-  .action_page .bottom_area .testimonial {
-    padding-left: 0;
-    padding-top: 85px;
-    background-position: top center;
-    background-size: 55px 55px; }
   .top_area {
     text-align: center; }
     .top_area .right_column {
@@ -672,6 +688,13 @@ button {
         text-align: center; } }
 
 @media only screen and (max-width: 768px) {
+  .action_page .bottom_area .testimonial {
+    padding-left: 0;
+    padding-top: 85px;
+    background-position: top center;
+    background-size: 55px 55px; }
+  .action_page .bottom_area .title {
+    text-align: center; }
   body {
     font-size: 1.8rem !important;
     line-height: 1.4; }
@@ -706,15 +729,13 @@ button {
   .popup {
     padding-top: 75px; }
     .popup > div {
-      padding: 70px 70px 50px; }
+      padding: 70px 30px 30px; }
     .popup form .title {
       font-size: 7vw; }
     .popup .button {
       font-size: 10vw; }
     .popup input[type="text"] {
       width: 100%; }
-    .popup a {
-      display: block; }
   .find_page .central_area {
     position: relative;
     transform: none;
