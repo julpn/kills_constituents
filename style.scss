@@ -304,7 +304,8 @@ $salmon: #f96643;
 		font-style: italic;
 		font-size: 23px;
 		border: 1px solid white;
-		padding: 5px 10px 7px;;
+		padding: 5px 10px 7px;
+		cursor: pointer;
 		@include transition(.3s);
 		
 		&:hover {
@@ -346,6 +347,7 @@ $salmon: #f96643;
 		color: white;
 		margin-bottom: 5px;
 		white-space: nowrap;
+		left: 0;
 	}
 	
 	.button:last-of-type {
@@ -922,8 +924,7 @@ button {
 //desktop
 .desktop nav {
 	padding-top: 35px;
-	max-width: 257px;
-	text-align: justify;
+	text-align: left;
 
 	div {
 		display: inline-block;
@@ -935,6 +936,11 @@ button {
 		border-bottom: 5px solid $yellow;
 		font-weight: 900;
 		color: $salmon;
+		margin-right: 35px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
 		
 		&:hover {
 			border-color: $salmon;
@@ -1052,7 +1058,25 @@ button {
 	
 	.desktop nav, .find_page .desktop nav {
 		margin: auto;
+		text-align: center;
 	}
+	
+	.action_page {
+		
+		.bottom_area {
+			
+			.testimonial {
+				
+				padding-left: 0;
+				padding-top: 85px;
+				background-position: top center;
+				background-size: 55px 55px;
+				
+			}
+		}
+		
+	}
+	
 	
 	
 	.top_area {
@@ -1140,6 +1164,12 @@ button {
 				background-position: top center;
 				background-size: 55px 55px;
 				
+				&.about {
+					background: none;
+					padding-top: 0;
+				}
+				
+				
 				.name {
 					text-align: center;
 				}
@@ -1149,8 +1179,7 @@ button {
 				}
 			}
 			
-			
-			
+		
 		}
 		
 	}
@@ -1265,7 +1294,7 @@ $standard_margin_horizontal: 30px;
 		padding-top: 75px;
 		
 		&>div {
-			padding: 70px 20px 30px;
+			padding: 70px 70px 50px;
 		}
 		
 		
@@ -1286,6 +1315,10 @@ $standard_margin_horizontal: 30px;
 		
 		input[type="text"] {
 			width: 100%;
+		}
+		
+		a {
+			display: block;
 		}
 		
 	}
