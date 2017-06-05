@@ -242,7 +242,10 @@
   .bottom_area .testimonial {
     padding-bottom: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #f96643; }
+    border-bottom: 1px solid #f96643;
+    padding-left: 110px;
+    background-image: url(images/icon-testimonial.png) no-repeat top left;
+    background-size: 85px 85px; }
     .bottom_area .testimonial .title {
       color: white;
       font-weight: 900;
@@ -255,7 +258,7 @@
       text-decoration: underline; }
     .bottom_area .testimonial a:hover {
       color: #ffde19; }
-    .bottom_area .testimonial .subtitle {
+    .bottom_area .testimonial subtitle {
       font-size: 17px;
       font-weight: 900;
       color: #ffde19;
@@ -264,19 +267,19 @@
       padding: 0 5px;
       color: black;
       margin-right: 8px; }
+    .bottom_area .testimonial a.subtitle:hover {
+      color: black;
+      background: white; }
+    .bottom_area .testimonial > .show_up {
+      background-image: url(images/people.png); }
+    .bottom_area .testimonial > .donate {
+      background-image: url(images/money.png); }
+    .bottom_area .testimonial > .contact {
+      background-image: url(images/phone.png); }
+    .bottom_area .testimonial > .senate {
+      background-image: url(images/health.png); }
   .bottom_area .testimonial:last-child {
     border: none; }
-  .bottom_area .written {
-    padding-left: 110px;
-    background: url(images/icon-testimonial.png) no-repeat top left;
-    background-size: 85px 85px; }
-    .bottom_area .written .name {
-      font-weight: 900;
-      padding-top: 25px;
-      text-align: right; }
-    .bottom_area .written .location {
-      color: #ffde19;
-      text-align: right; }
   .bottom_area .methodology {
     background-image: url(images/icon-methodology.png); }
 
@@ -732,7 +735,9 @@ button {
 
 @media only screen and (max-width: 550px) {
   .top_area h1 span {
-    font-size: 10vw; } }
+    font-size: 10vw; }
+  .desktop nav div {
+    margin-right: 15px; } }
 
 @media only screen and (min-width: 767px) {
   .desktop_off {

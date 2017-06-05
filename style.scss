@@ -480,6 +480,9 @@ $salmon: #f96643;
 		padding-bottom: 30px;
 		margin-bottom: 30px;
 		border-bottom: 1px solid $salmon;
+		padding-left: 110px;
+		background-image: url(images/icon-testimonial.png) no-repeat top left;
+		background-size: 85px 85px;	
 		
 		.title {
 			color: white;
@@ -499,7 +502,7 @@ $salmon: #f96643;
 			color: $yellow;
 		}
 		
-		.subtitle {
+		subtitle {
 			font-size: 17px;
 			font-weight: 900;
 			color: $yellow;
@@ -508,7 +511,29 @@ $salmon: #f96643;
 			padding: 0 5px;
 			color: black;
 			margin-right: 8px;
+						
+		}
+		
+		a.subtitle:hover {
+			color: black;
+			background: white;
+		}
+		
+		
+		&>.show_up {
+			background-image: url(images/people.png);
+		}
+		
+		&>.donate{
+				background-image: url(images/money.png);
+			}
 			
+		&>.contact {
+			background-image: url(images/phone.png);
+		}
+		
+		&>.senate{
+			background-image: url(images/health.png);
 		}
 		
 	}
@@ -518,23 +543,7 @@ $salmon: #f96643;
 	}
 	
 	
-	.written {
-		padding-left: 110px;
-		background: url(images/icon-testimonial.png) no-repeat top left;
-		background-size: 85px 85px;		
 
-		.name {
-			font-weight: 900;
-			padding-top: 25px;
-			text-align: right;
-		}
-		
-		.location {
-			color: $yellow;
-			text-align: right;
-		}
-
-	}
 
 	
 	
@@ -1381,7 +1390,13 @@ $standard_margin_horizontal: 30px;
 			}
 		}
 	}
-
+	
+	.desktop nav {
+		
+		div {
+			margin-right: 15px;
+		}
+	}
 
 }
 
