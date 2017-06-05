@@ -687,6 +687,15 @@ button {
       .bottom_area .right_column .written .location {
         text-align: center; } }
 
+@media only screen and (max-width: 1024px) {
+  .search_again {
+    display: block;
+    width: fit-content;
+    width: intrinsic;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    font-size: 20px; } }
+
 @media only screen and (max-width: 768px) {
   .action_page .bottom_area .testimonial {
     padding-left: 0;
