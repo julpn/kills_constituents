@@ -1231,7 +1231,11 @@ button {
 //tablet
 @media only screen and (max-width: 1024px) {
 	
-
+	.search_again {
+		display: block;
+		@include fit_content();
+		font-size: 20px;
+	}
 	
 }
 
