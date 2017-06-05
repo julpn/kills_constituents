@@ -1,4 +1,25 @@
 
+//makes long text smaller
+$(function() {
+
+  if ($("h1 span").text().length > 10) {
+    $("h1").addClass("smaller");
+  }
+
+  if ($("#deaths").text().length > 3) {
+    $("#deaths").parent().addClass("smaller");
+  }
+
+  if ($("#uninsured").text().length > 5) {
+    $("#uninsured").parent().addClass("smaller");
+  }
+
+
+});
+
+
+
+
 $(function() {
 	$(".popup").delay(15000).fadeIn(400);
 
