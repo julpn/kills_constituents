@@ -133,6 +133,14 @@ $salmon: #f96643;
 	left: 0;
 }
 
+#social-img {
+	width: 50px;
+	
+	&:first-child {
+		margin-right: 8px;
+	}
+}
+
 
 
 
@@ -472,6 +480,37 @@ $salmon: #f96643;
 		padding-bottom: 30px;
 		margin-bottom: 30px;
 		border-bottom: 1px solid $salmon;
+		
+		.title {
+			color: white;
+			font-weight: 900;
+			font-size: 23px;
+			text-transform: uppercase;
+			letter-spacing: .1rem;
+			margin-bottom: 40px;
+		}
+		
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+		
+		a:hover {
+			color: $yellow;
+		}
+		
+		.subtitle {
+			font-size: 17px;
+			font-weight: 900;
+			color: $yellow;
+			display: inline-block;
+			background: $yellow;
+			padding: 0 5px;
+			color: black;
+			margin-right: 8px;
+			
+		}
+		
 	}
 	
 	.testimonial:last-child {
@@ -503,35 +542,6 @@ $salmon: #f96643;
 		
 		background-image: url(images/icon-methodology.png);
 		
-		.title {
-			color: white;
-			font-weight: 900;
-			font-size: 23px;
-			text-transform: uppercase;
-			letter-spacing: .1rem;
-			margin-bottom: 40px;
-		}
-		
-		a {
-			color: white;
-			text-decoration: underline;
-		}
-		
-		a:hover {
-			color: $yellow;
-		}
-		
-		.subtitle {
-			font-size: 17px;
-			font-weight: 900;
-			color: $yellow;
-			display: inline-block;
-			background: $yellow;
-			padding: 0 5px;
-			color: black;
-			margin-right: 8px;
-			
-		}
 		
 	}
 
