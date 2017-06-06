@@ -454,11 +454,13 @@
     margin-right: 35px;
     border-bottom: none; }
   .action_page .testimonial .title {
-    font-size: 32px;
+    font-size: 50px;
     font-style: italic;
     text-transform: none;
     margin-bottom: 20px;
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-family: 'Tungsten A', 'Tungsten B';
+    text-transform: uppercase; }
 
 a {
   outline: none;
