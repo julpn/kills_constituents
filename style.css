@@ -1,3 +1,8 @@
+.lined_black_bg, body {
+  background-color: black;
+  background-image: url(images/home-lined-background.png);
+  background-size: 20px 10px; }
+
 .clearfix:after, .bottom_area:after, .top_area > div:after, .top_area .right_column:after, .top_area .right_column .statistic:after, .top_area .left_column:after {
   content: "";
   display: block;
@@ -138,13 +143,15 @@
     margin: auto; }
   .top_area.good_rep .search_again {
     color: #f96643;
-    text-align: right;
     font-weight: 900;
     font-style: italic;
     font-size: 23px;
     border: 1px solid white;
     padding: 5px 10px 7px;
     cursor: pointer;
+    text-decoration: none;
+    line-height: 1.2;
+    text-align: center;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -266,7 +273,7 @@
       color: #ffde19;
       display: inline-block;
       background: #ffde19;
-      padding: 0 5px;
+      padding: 0 5px 2px;
       color: black;
       margin-right: 8px;
       text-decoration: none;
@@ -276,16 +283,16 @@
       -o-transition: all 0.2s;
       transition: all 0.2s; }
     .bottom_area .testimonial a.subtitle:hover {
-      color: black;
-      background: white; }
+      color: white;
+      background: #f96643; }
     .bottom_area .testimonial.show_up {
-      background-image: url(images/people.png); }
+      background-image: url(images/icon-townhall.png); }
     .bottom_area .testimonial.donate {
-      background-image: url(images/money.png); }
+      background-image: url(images/icon-vote_wallet.png); }
     .bottom_area .testimonial.contact {
-      background-image: url(images/phone.png); }
+      background-image: url(images/icon-contact_rep.png); }
     .bottom_area .testimonial.senate {
-      background-image: url(images/health.png); }
+      background-image: url(images/icon-senate.png); }
   .bottom_area .testimonial:last-child {
     border: none; }
   .bottom_area .methodology {
@@ -417,18 +424,41 @@
     line-height: 1.2;
     margin-bottom: 15px; }
 
+.action_page b {
+  color: #f96643;
+  font-weight: 400; }
+
+.action_page .top_area {
+  padding-bottom: 0; }
+
 .action_page .right_column {
   width: calc(100% - 250px); }
 
 .action_page .left_column {
   width: 250px; }
 
-.action_page .testimonial .title {
-  font-size: 32px;
-  font-style: italic;
-  text-transform: none;
-  margin-bottom: 20px;
-  line-height: 1.1; }
+.action_page .testimonial {
+  width: calc(50% - 35px); }
+  .action_page .testimonial:nth-child(1) {
+    float: left;
+    margin-right: 35px; }
+  .action_page .testimonial:nth-child(2) {
+    float: left;
+    margin-left: 35px; }
+  .action_page .testimonial:nth-child(3) {
+    float: right;
+    margin-left: 35px;
+    border-bottom: none; }
+  .action_page .testimonial:nth-child(4) {
+    float: right;
+    margin-right: 35px;
+    border-bottom: none; }
+  .action_page .testimonial .title {
+    font-size: 32px;
+    font-style: italic;
+    text-transform: none;
+    margin-bottom: 20px;
+    line-height: 1.1; }
 
 a {
   outline: none;
@@ -466,8 +496,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  box-sizing: border-box;
-  background: black; }
+  box-sizing: border-box; }
 
 input, textarea {
   -webkit-appearance: none;
@@ -685,16 +714,34 @@ button {
       .bottom_area .right_column .written .name {
         text-align: center; }
       .bottom_area .right_column .written .location {
-        text-align: center; } }
+        text-align: center; }
+  .action_page .testimonial {
+    width: calc(50% - 25px); }
+    .action_page .testimonial:nth-child(1) {
+      margin-right: 25px; }
+    .action_page .testimonial:nth-child(2) {
+      margin-left: 25px; }
+    .action_page .testimonial:nth-child(3) {
+      margin-left: 25px; }
+    .action_page .testimonial:nth-child(4) {
+      margin-right: 25px; } }
 
 @media only screen and (max-width: 1024px) {
-  .search_again {
+  .top_area.good_rep .search_again {
     display: block;
     width: fit-content;
     width: intrinsic;
     width: -moz-fit-content;
     width: -webkit-fit-content;
-    font-size: 20px; } }
+    font-size: 20px; }
+  .action_page #social-img {
+    width: 30px; }
+  .action_page .testimonial {
+    width: 100%; }
+    .action_page .testimonial:nth-child(n) {
+      margin-left: 0;
+      margin-right: 0;
+      float: none; } }
 
 @media only screen and (max-width: 768px) {
   .action_page .bottom_area .testimonial {
