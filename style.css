@@ -67,20 +67,21 @@
     transform: translateY(-50%) translateX(-50%);
     position: absolute;
     text-align: center;
-    max-width: 650px;
+    max-width: 735px;
     width: 90%; }
   .find_page img {
     width: 65px;
     margin-bottom: 15px; }
   .find_page .introduction {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 35px; }
     .find_page .introduction b {
       color: #ffde19;
       font-weight: 900; }
   .find_page .find_form {
     background: #f96643;
-    padding: 50px; }
+    padding: 30px 40px;
+    max-width: 555px; }
     .find_page .find_form .current_location input[type="submit"] {
       font-size: 1.4rem;
       font-weight: 900;
@@ -94,7 +95,7 @@
       .find_page .find_form .current_location input[type="submit"]:hover {
         background: none; }
     .find_page .find_form .explain {
-      font-size: 25px;
+      font-size: 20px;
       line-height: 1.2;
       margin-bottom: 25px; }
     .find_page .find_form input {
@@ -660,6 +661,10 @@ button {
   background: white;
   color: black; }
 
+@media only screen and (max-height: 750px) {
+  .find_page .central_area {
+    top: 420px; } }
+
 @media only screen and (max-width: 1200px) {
   .desktop nav, .find_page .desktop nav {
     margin: auto;
@@ -794,11 +799,17 @@ button {
       font-size: 10vw; }
     .popup input[type="text"] {
       width: 100%; }
+  .find_page .home_headline {
+    font-family: 'Tungsten A', 'Tungsten B';
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    line-height: 1; }
   .find_page .central_area {
     position: relative;
     transform: none;
     left: auto;
-    top: auto;
+    top: auto !important;
     margin: 10px auto 30px;
     padding-left: 0;
     padding-right: 0;
