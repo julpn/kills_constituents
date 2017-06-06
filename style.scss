@@ -164,7 +164,7 @@ $salmon: #f96643;
 	.central_area {
 		@include absolute_center();
 		text-align: center;
-		max-width: 650px;
+		max-width: 735px;
 		width: 90%;
 	}
 	
@@ -179,7 +179,7 @@ $salmon: #f96643;
 	}
 	
 	.introduction {
-		font-size: 22px;
+		font-size: 18px;
 		margin-bottom: 35px;
 		
 		b {
@@ -193,8 +193,9 @@ $salmon: #f96643;
 	
 	.find_form {
 		background: $salmon;
-		padding: 50px;
-
+		padding: 30px 40px;
+		max-width: 555px;
+		
 		.current_location input[type="submit"] {
 			font-size: 1.4rem;
 			font-weight: 900;
@@ -213,7 +214,7 @@ $salmon: #f96643;
 		}
 		
 		.explain {
-			font-size: 25px;
+			font-size: 20px;
 			line-height: 1.2;
 			margin-bottom: 25px;
 		}
@@ -1161,6 +1162,20 @@ button {
 }
 
 
+
+//phone
+@media only screen and (max-height: 750px) {
+	
+	.find_page {
+			.central_area {
+				top: 420px;
+		}
+	}
+	
+}
+
+
+
 //smaller desktop
 @media only screen and (max-width: 1200px) {
 	
@@ -1350,6 +1365,10 @@ button {
 }
 
 
+
+
+
+
 //phone
 @media only screen and (max-width: 768px) {
 	
@@ -1496,11 +1515,20 @@ $standard_margin_horizontal: 30px;
 		
 	.find_page {
 		
+		
+		.home_headline {
+			font-family: 'Tungsten A', 'Tungsten B';
+			font-size: 70px;
+			text-transform: uppercase;
+			margin-bottom: 22px;
+			line-height: 1;
+		}
+		
 		.central_area {
 			position: relative;
 			transform: none;
 			left: auto;
-			top: auto;
+			top: auto !important;
 			margin: 10px auto 30px;
 			padding-left: 0;
 			padding-right: 0;
