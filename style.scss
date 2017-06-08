@@ -161,6 +161,16 @@ $salmon: #f96643;
     background-size: 20px 10px;
 	color: white;
 	
+	.home_headline {
+		font-family: 'Tungsten A', 'Tungsten B';
+		font-size: 70px;
+		text-transform: uppercase;
+		margin-bottom: 22px;
+		line-height: 1;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	
 	.central_area {
 		@include absolute_center();
 		text-align: center;
@@ -195,6 +205,8 @@ $salmon: #f96643;
 		background: $salmon;
 		padding: 30px 40px;
 		max-width: 555px;
+		margin-left: auto;
+		margin-right: auto;
 		
 		.current_location input[type="submit"] {
 			font-size: 1.4rem;
@@ -1516,13 +1528,7 @@ $standard_margin_horizontal: 30px;
 	.find_page {
 		
 		
-		.home_headline {
-			font-family: 'Tungsten A', 'Tungsten B';
-			font-size: 70px;
-			text-transform: uppercase;
-			margin-bottom: 22px;
-			line-height: 1;
-		}
+
 		
 		.central_area {
 			position: relative;
@@ -1577,8 +1583,17 @@ $standard_margin_horizontal: 30px;
 			margin-right: 15px;
 		}
 	}
+	
+	.find_page {
+		.home_headline {
+			font-size: 13vw;
+		}
+	}
+	
 
 }
+
+
 
 
 
