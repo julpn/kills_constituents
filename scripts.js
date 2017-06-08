@@ -1,6 +1,6 @@
 
 //makes long text smaller
-$(function() {
+function shortenText() {
 
   if ($("h1 span").text().length > 10) {
     $("h1").addClass("smaller");
@@ -105,6 +105,9 @@ function otherPages(url) {
     }
   });
   return otherPage;
+  
+  shortenText();
+  
 }
 
 
