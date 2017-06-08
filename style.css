@@ -75,14 +75,17 @@
     transform: translateY(-50%) translateX(-50%);
     position: absolute;
     text-align: center;
-    max-width: 735px;
+    max-width: 756px;
     width: 90%; }
   .find_page img {
     width: 65px;
     margin-bottom: 15px; }
   .find_page .introduction {
     font-size: 18px;
-    margin-bottom: 35px; }
+    margin-bottom: 35px;
+    max-width: 682px;
+    margin-left: auto;
+    margin-right: auto; }
     .find_page .introduction b {
       color: #ffde19;
       font-weight: 900; }
@@ -193,7 +196,7 @@
     -ms-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     position: absolute;
-    padding: 70px 70px 50px;
+    padding: 70px;
     max-width: 90%;
     background: #ffde19;
     text-align: center; }
@@ -802,9 +805,11 @@ button {
   .popup {
     padding-top: 75px; }
     .popup > div {
-      padding: 70px 30px 30px; }
+      padding: 70px 30px 70px; }
     .popup form .title {
       font-size: 7vw; }
+    .popup .close_button {
+      width: 25px; }
     .popup .button {
       font-size: 10vw; }
     .popup input[type="text"] {
