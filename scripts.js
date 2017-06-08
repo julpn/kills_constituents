@@ -93,6 +93,9 @@ function updateContent(data) {
 
   var page_title = title + " " + data.first_name + " " + data.last_name + " voted to kill " + data.killed + " of " + possessive + " constituents by repealing the Affordable Care Act";
   $("title").text(page_title);
+  
+  shortenText();
+  
 }
 
 function otherPages(url) {
@@ -106,7 +109,7 @@ function otherPages(url) {
   });
   return otherPage;
   
-  shortenText();
+  
   
 }
 
