@@ -174,7 +174,7 @@ $salmon: #f96643;
 	.central_area {
 		@include absolute_center();
 		text-align: center;
-		max-width: 735px;
+		max-width: 756px;
 		width: 90%;
 	}
 	
@@ -191,6 +191,9 @@ $salmon: #f96643;
 	.introduction {
 		font-size: 18px;
 		margin-bottom: 35px;
+		max-width: 682px;
+		margin-left: auto;
+		margin-right: auto;
 		
 		b {
 			color: $yellow;
@@ -373,7 +376,7 @@ $salmon: #f96643;
 	
 	&>div {
 		@include absolute_center();
-		padding: 70px 70px 50px;
+		padding: 70px;
 		max-width: 90%;
 		background: $yellow;
 		text-align: center;
@@ -1499,7 +1502,7 @@ $standard_margin_horizontal: 30px;
 		padding-top: 75px;
 		
 		&>div {
-			padding: 70px 30px 30px;
+			padding: 70px 30px 70px;
 		}
 		
 		
@@ -1511,7 +1514,7 @@ $standard_margin_horizontal: 30px;
 		
 		
 		.close_button {
-			
+			width: 25px;
 		}
 		
 		.button {
