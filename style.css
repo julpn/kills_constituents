@@ -57,6 +57,14 @@
   background-image: url(images/home-lined-background.png);
   background-size: 20px 10px;
   color: white; }
+  .find_page .home_headline {
+    font-family: 'Tungsten A', 'Tungsten B';
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    line-height: 1;
+    padding-left: 30px;
+    padding-right: 30px; }
   .find_page .central_area {
     left: 50%;
     top: 50%;
@@ -81,7 +89,9 @@
   .find_page .find_form {
     background: #f96643;
     padding: 30px 40px;
-    max-width: 555px; }
+    max-width: 555px;
+    margin-left: auto;
+    margin-right: auto; }
     .find_page .find_form .current_location input[type="submit"] {
       font-size: 1.4rem;
       font-weight: 900;
@@ -799,12 +809,6 @@ button {
       font-size: 10vw; }
     .popup input[type="text"] {
       width: 100%; }
-  .find_page .home_headline {
-    font-family: 'Tungsten A', 'Tungsten B';
-    font-size: 70px;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-    line-height: 1; }
   .find_page .central_area {
     position: relative;
     transform: none;
@@ -827,7 +831,9 @@ button {
   .top_area h1 span {
     font-size: 10vw; }
   .desktop nav div {
-    margin-right: 15px; } }
+    margin-right: 15px; }
+  .find_page .home_headline {
+    font-size: 13vw; } }
 
 @media only screen and (min-width: 767px) {
   .desktop_off {
