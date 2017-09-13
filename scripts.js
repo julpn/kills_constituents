@@ -13,6 +13,16 @@ function shortenText() {
   if ($("#uninsured").text().length > 5) {
     $("#uninsured").parent().addClass("smaller");
   }
+  
+  if ($("#last_name").text().length > 10) {
+    $("#last_name").addClass("smaller");
+    $("#first_name").addClass("smaller");
+  }
+  
+  if ($("#first_name").text().length > 10) {
+    $("#last_name").addClass("smaller");
+    $("#first_name").addClass("smaller");
+  }
 
 
 });
