@@ -432,6 +432,10 @@
       color: #f96643; }
     .top_area h1 span:nth-child(2) {
       padding-bottom: 0; }
+    .top_area h1 .first_name .smaller {
+      font-size: 50px; }
+    .top_area h1 .last_name .smaller {
+      font-size: 50px; }
   .top_area h2 {
     font-size: 39px;
     font-weight: 900;
